@@ -3,88 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Response Task</title>
-<style>
-         /* Styles Globaux */
-         body {
-            background-color: black;
-            color: white;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-end; 
-            overflow: hidden;
-            position: relative;
-        }
-        .response-box {
-            /* Dimensions (Approximation 4cm x 5cm) */
-            width: 100px; 
-            height: 80px;
-            border: 2px solid white;
-            background-color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: bold;
-            user-select: none;
-            cursor: pointer;
-            
-            position: absolute; 
-            top: 50%;
-            left: 50%;
-            margin-left: -50px; 
-            
-            transform-origin: 50% 100%; 
-        }
-
-                /* 3. Positionnement Précis des Boîtes par Rotation */
-        /* Rayon plat (translateY: -180px) et Angles larges (±70deg, ±25deg) */
-        /* Mots des boîtes mis en Français */
-        #rouge { transform: rotate(-70deg) translateY(-180px) rotate(70deg); } 
-        #bleu { transform: rotate(-25deg) translateY(-180px) rotate(25deg); }
-        #jaune { transform: rotate(25deg) translateY(-180px) rotate(-25deg); }
-        #vert { transform: rotate(70deg) translateY(-180px) rotate(-70deg); } 
-        
-        /* 4. Zone du Stimulus de Stroop (Positionnée au centre) */
-        #stroop-stimulus {
-            position: absolute; 
-            bottom: 30vh; 
-            font-size: 72px;
-            font-weight: 900;
-            text-align: center;
-            width: 100%;
-            color: red; /* La couleur de l'encre du stimulus */
-        }
-
-        /* 5. Bouton de DÉMARRER (2cm x 5cm, positionné en bas) */
-        #start-button {
-            width: 150px; /* 5cm */
-            height: 50px; /* 2cm */
-            border: 2px solid white;
-            background-color: black;
-            font-size: 20px;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5vh; 
-            user-select: none;
-            cursor: pointer;
-            transform: translateX(-50%);
-        }
-
-        #display-text {
-            color: white;           /* white text */
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-    
-    </style>
+<link rel="stylesheet" href="shared.css" />
 </head>
 <body>
     <p id="display-text" style="display: none;"></p> 
@@ -96,24 +15,7 @@
         <div class="response-box" id="jaune">YELLOW</div>
         <div class="response-box" id="vert">GREEN</div>
     </div>
-
-    <script>
-        // Variable to display
-        let myVariable = "Hello world";
-      
-        // Get the button and the paragraph
-        const startButton = document.getElementById("start-button");
-        const displayText = document.getElementById("display-text");
-      
-        // Add click event
-        startButton.addEventListener("click", function() {
-          // Show the paragraph and set its text
-          displayText.style.display = "block"; // make it visible
-          displayText.textContent = myVariable; // set the text
-        });
-      </script>
-
-
+    <script src="../scripts/boutons.js" defer></script> 
 </body>
 </html>
     </style>
