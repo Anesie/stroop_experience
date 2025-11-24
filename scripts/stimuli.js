@@ -96,8 +96,8 @@
                 //performance.now() permet d'enregistrer le temps de réaction à partir du moement où le mot apparaît à l'écran
                 // performance.now() - startTime : calcule le temps de réaction
                 time: performance.now() - startTime, 
-                x: event.clientX,
-                y: event.clientY
+                x: event.participantX,
+                y: event.participantY
             });
         }
     }
@@ -173,8 +173,8 @@
         };
     
         // Capture des coordonnées de la souris et du temps de réaction
-        const endMouseX = event.clientX;
-        const endMouseY = event.clientY;
+        const endMouseX = event.participantX;
+        const endMouseY = event.participantY;
         const reactionTime = performance.now() - startTime;
         startTime = null; 
         
@@ -257,8 +257,8 @@
         }
         
         // Capture les coordonnées de départ de la souris
-        startMouseX = event.clientX;
-        startMouseY = event.clientY;
+        startMouseX = event.participantX;
+        startMouseY = event.participantY;
         
         //Permets de déclencher le début de l'essai
         startTrial();
