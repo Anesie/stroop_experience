@@ -1,4 +1,4 @@
-/* 0. CORPS DE LA PAGE */
+/*Corps de la page*/
 body {
     background-color: black;
     color: white;
@@ -10,21 +10,18 @@ body {
     position: relative; /* Base de référence pour tout */
 }
 
-/* 1. CONTENEUR MAÎTRE : CENTRAGE PARFAIT */
-/* Ce conteneur centre l'ensemble de la disposition (boîtes + bouton) */
+/* Ce block centre l'ensemble de la disposition (bouton start + bouton réponse) */
 #main-container {
-    width: 800px; /* Largeur de la zone du carré */
-    height: 600px; /* Hauteur de la zone du carré */
+    width: 800px; 
+    height: 600px;
     position: absolute; 
-    
-    /* Centrage parfait par top/left et margin négatif */
     top: 50%;
     left: 50%;
-    margin-top: -300px; /* -(Hauteur/2) */
-    margin-left: -400px; /* -(Largeur/2) */
+    margin-top: -300px; 
+    margin-left: -400px;
 }
 
-/* 2. BOUTON START */
+/* Bouton start */
 #start-button {
     width: 150px;
     height: 50px;
@@ -38,14 +35,12 @@ body {
     justify-content: center;
     user-select: none;
     cursor: pointer;
-    
-    /* POSITIONNEMENT : Centré au bas de la zone */
     position: absolute;
-    top: 450px; /* Décalage vertical dans le conteneur de 600px de haut */
-    left: 315px; /* (800px / 2) - (150px / 2) pour centrer */
+    top: 450px; 
+    left: 315px;
 }
 
-/* 3. STYLE DE BASE DES BOÎTES DE RÉPONSE */
+/* Boîtes de réponse */
 .response-box {
     width: 100px;
     height: 80px;
@@ -60,50 +55,56 @@ body {
     user-select: none;
     cursor: pointer;
     
-    position: absolute; /* Placement à l'intérieur de #main-container */
+    position: absolute;
 }
 
-/* 4. POSITIONNEMENT DES BOÎTES (Disposition en Carré) */
-/* Les coordonnées sont basées sur le conteneur de 800px x 600px */
-
-/* RED (Coin Haut-Gauche) */
+/* Boîte rouge en Haut à Gauche */
 #rouge {
     top: 200px;
     left: 80px;
 }
 
-/* BLUE (Haut-Centre-Gauche) */
+/* Boîte bleu en Haut au centre à Gauche */
 #bleu {
     top: 100px;
     left: 200px; 
 }
 
-/* YELLOW (Haut-Centre-Droit) */
+/* Boîte jaune en Haut au centre à Droite */
 #jaune { 
     top: 100px;
     left: 480px; 
 }
 
-/* GREEN (Coin Haut-Droit) */
+/* Boîte vert en Haut à Droite */
 #vert {
     top: 200px;
     left: 600px;
 }
 
-/* 5. STIMULUS STROOP */
+/* Stimuli Congruent et Incongruent */
 #display-text {
     color: white;
-    font-size: 72px; /* Grand texte pour le stimulus */
+    font-size: 72px; 
     font-weight: 900;
-    
-    /* CENTRAGE PARFAIT AU MILIEU DE L'ÉCRAN */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* chache la souris le temps de l'affiche du stimuli */
+/* Chache la souris le temps de l'affiche du stimuli */
 .cursor-hidden {
     cursor: none !important; 
+}
+
+/* Le symbole X rouge au milieu*/
+#feedback-symbol {
+    color: red;
+    font-size: 150px; /* Grande taille */
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

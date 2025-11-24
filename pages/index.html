@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Response Task</title>
+<title>Expérience de Stroop</title>
 <link rel="stylesheet" href="shared.css" />
 </head>
 <body>
-    <p id="display-text" style="display: none;"></p> 
+    <!-- Pour afficher le X rouge au centre de l'écran lorsque le participant se trompe -->
+    <span id="feedback-symbol" style="display: none;"></span>
+    <p id="display-text" style="display: none;"></p>
     
+    <!-- Création d'un bloc pricnipal englobant le bouton start et les boutons réponses pour les centrer dans le fichier shared.css-->
     <div id="main-container">
         <div id="start-button">START</div>
         <div class="arc-container">
@@ -19,8 +22,5 @@
     </div>
     <script src="../scripts/stimuli.js" defer></script>
 
-    </body>
+</body>
 </html>
-    </style>
-</head>
-<body>
