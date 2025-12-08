@@ -101,7 +101,7 @@ body {
 /* Le symbole X rouge au milieu*/
 #feedback-symbol {
     color: red;
-    font-size: 150px; /* Grande taille */
+    font-size: 150px; 
     font-weight: 900;
     position: absolute;
     top: 50%;
