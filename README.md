@@ -34,4 +34,4 @@ Ce projet est un script client-side pur (Front-end) et ne nécessite aucune inst
 
 1. Clonez ce dépôt GitHub :
    ```bash
-   git clone [https://github.com/Anesie/](https://github.com/Anesie/)[NomDuDepot].git
+   git clone https://github.com/Anesie/stroop_experience.git
