@@ -1,4 +1,4 @@
-# 🧠 Web-Experiment : Tâche de Stroop
+# 🧠 Tâche de Stroop
 
 ## 📖 Présentation
 Ce projet est une implémentation web de la célèbre **tâche de Stroop**, une expérience classique en psychologie cognitive permettant d'évaluer l'interférence cognitive et le contrôle inhibiteur. 
