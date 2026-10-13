@@ -1,37 +1,47 @@
-# 🧠 Tâche de Stroop
+# 🧠 Stroop Task Experiment
 
-## 📖 Présentation
-Ce projet est une implémentation web de la célèbre **tâche de Stroop**, une expérience classique en psychologie cognitive permettant d'évaluer l'interférence cognitive et le contrôle inhibiteur. 
+## 📖 Presentation
+This project is a web implementation of the famous **Stroop task**, a classic cognitive psychology experiment used to evaluate cognitive interference and inhibitory control.
 
-Dans cette expérience, le participant est confronté à des mots de couleurs ("ROUGE", "VERT", "BLEU", "JAUNE") écrits dans des encres de couleurs différentes. **L'objectif est de cliquer sur la boîte correspondant à la couleur de l'encre, tout en ignorant le mot écrit.**
+In this experiment, participants are presented with color words ("RED", "GREEN", "BLUE", "YELLOW") printed in different ink colors. **The objective is to click on the box corresponding to the ink color while ignoring the written word.**
 
-Ce script a été développé spécifiquement pour la collecte de données comportementales et motrices, avec un accent particulier sur la précision temporelle et le suivi spatial des mouvements de prise de décision.
+This script was developed specifically for behavioral and motor data collection, with a strong focus on temporal precision and the spatial tracking of decision-making movements.
 
-## ✨ Fonctionnalités Principales
-*   **Design Expérimental Structuré :** L'expérience est divisée en 6 blocs de 20 essais, incluant des pauses automatiques entre les blocs.
-*   **Conditions Congruentes et Incongruentes :** Mélange aléatoire (via un algorithme de shuffle) de stimuli congruents (ex: le mot "ROUGE" écrit en rouge) et incongruents (ex: le mot "VERT" écrit en rouge) avec des ratios spécifiques pour manipuler l'anticipation.
-*   **Mouse Tracking (Suivi de souris) :** Enregistrement de la trajectoire complète de la souris toutes les 13 millisecondes pour permettre l'analyse des mouvements moteurs et de l'hésitation cognitive.
-*   **Chronométrie de Haute Précision :** Utilisation de l'API `performance.now()` pour garantir un enregistrement des temps de réaction (RT) avec une précision de l'ordre de la milliseconde.
-*   **Feedback Visuel :** Affichage d'une pénalité visuelle (un grand "X" rouge) et d'un délai supplémentaire (2 secondes) en cas de mauvaise réponse, forçant le participant à se reconcentrer.
+## ✨ Key Features
+- **Structured Experimental Design:** The experiment is divided into 6 blocks of 20 trials, including automatic pauses between blocks.
+- **Congruent and Incongruent Conditions:** Randomized mixing (via a shuffle algorithm) of congruent stimuli (e.g., the word "RED" written in red) and incongruent stimuli (e.g., the word "GREEN" written in red) with specific ratios to manipulate anticipation.
+- **Mouse Tracking:** Recording the full mouse trajectory every 13 milliseconds to analyze motor movements and cognitive hesitation.
+- **High-Precision Chronometry:** Use of the `performance.now()` API to ensure reaction time (RT) recording with millisecond-level precision.
+- **Visual Feedback:** Displaying a visual penalty (a large red "X") and an additional delay (2 seconds) on incorrect responses, forcing the participant to refocus.
 
-## 📊 Données Collectées
-À la fin de l'expérience, le script génère un tableau de résultats détaillé (`results`), prêt à être exporté pour des analyses statistiques (ex: via R ou Python). Pour chaque essai, les données suivantes sont enregistrées :
-*   `trialNumber` : Numéro de l'essai.
-*   `word` & `inkColor` : Le mot affiché et la véritable couleur de l'encre.
-*   `type` : Type d'essai (Congruent ou Incongruent).
-*   `response` & `isCorrect` : Le choix du participant et l'évaluation de l'exactitude (Vrai/Faux).
-*   `reactionTime` : Temps de réaction exact.
-*   `startMouseX` / `startMouseY` : Coordonnées du clic initial (départ).
-*   `endMouseX` / `endMouseY` : Coordonnées du clic final (réponse).
-*   `mouseTrace` : Un sous-tableau contenant l'historique complet des coordonnées (x, y) et du timestamp de la souris pendant l'essai.
+## 📊 Collected Data
+At the end of the experiment, the script generates a detailed results array (`results`), ready to be exported for statistical analysis (e.g., via R or Python). For each trial, the following data is recorded:
+- `trialNumber`: Trial number.
+- `word` & `inkColor`: The displayed word and the actual ink color.
+- `type`: Trial type (Congruent or Incongruent).
+- `response` & `isCorrect`: The participant's choice and accuracy evaluation (True/False).
+- `reactionTime`: Exact reaction time.
+- `startMouseX` / `startMouseY`: Coordinates of the initial click (start).
+- `endMouseX` / `endMouseY`: Coordinates of the final click (response).
+- `mouseTrace`: A sub-array containing the complete history of mouse coordinates (x, y) and timestamps during the trial.
 
-## 🛠️ Technologies Utilisées
-*   **HTML5 / CSS3 :** Création d'une interface minimaliste (fond noir, texte blanc) pour éliminer les distractions visuelles et forcer l'attention sur les stimuli.
-*   **JavaScript (Vanilla) :** Logique de l'expérience, manipulation du DOM en temps réel, gestion des événements (`Event Listeners`), minuteries asynchrones (`setTimeout`, `setInterval`) et stockage des données.
+## 🛠️ Technologies Used
+- **HTML5 / CSS3:** Creation of a minimalist interface (black background, white text) to eliminate visual distractions and force attention onto the stimuli.
+- **Vanilla JavaScript:** Experiment logic, real-time DOM manipulation, event handling (`Event Listeners`), asynchronous timers (`setTimeout`, `setInterval`), and data storage.
 
-## 🚀 Installation et Utilisation
-Ce projet est un script client-side pur (Front-end) et ne nécessite aucune installation de serveur ou de base de données locale.
+## 🚀 Installation and Usage
+This project is a pure client-side script (Front-end) and requires no server or local database installation.
 
-1. Clonez ce dépôt GitHub :
+
+
+1. Clone this GitHub repository:
    ```bash
-   git clone https://github.com/Anesie/stroop_experience.git
+   git clone [https://github.com/Anesie/stroop_experience.git](https://github.com/Anesie/stroop_experience.git)
+   ```
+   
+2. Open the index.html file in any modern web browser.
+3. Click START to run the experiment.
+4. Open your browser's developer console (F12 -> Console) at the end of the experiment to view the generated data table (console.table(results)).
+
+### 👥 Authors
+Andrea Behar & Anesie Martiniani - Development (MIASHS Project)
